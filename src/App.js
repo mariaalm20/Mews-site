@@ -1,23 +1,24 @@
 import logo from './logo.svg';
-import './App.css';
+//import './App.css';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import MewsCalculator from './screens/MewsCalculator'
+import Menu from './screens/Menu'
+import MewsTable from './screens/MewsTable'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-[#287F87] h-[100%] flex py-4 pl-10 px-3">
+
+      <BrowserRouter>
+      <Menu />
+
+      <Routes>
+          <Route path="informacoes" element={<MewsTable />} />
+          <Route path="enfermaria" element={<MewsCalculator />} />
+      </Routes>
+    </BrowserRouter>
     </div>
   );
 }
