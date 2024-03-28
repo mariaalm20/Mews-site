@@ -1,46 +1,46 @@
+import React from 'react';
 import { useLocation } from 'react-router-dom';
+import logo from '../../utils/assets/icons/Menu/logoUem.jpg';
+import uem from '../../utils/assets/icons/Menu/uem.jpg';
+import profurg from '../../utils/assets/icons/Menu/profurg.png';
+
 function Menu() {
   const location = useLocation();
   const isInformacoesAtiva = location.pathname === '/informacoes';
-  const isEnfermariaAtiva = location.pathname === '/enfermaria';
+  const isEnfermariaAtiva = location.pathname === '/';
 
   return (
     <div class="flex h-screen flex-col justify-between font-poppins">
       <div class="pr-10 py-6">
-      <div class="sticky inset-x-0 bottom-0">
-        <a href="#" class="flex items-center gap-2 hover:bg-gray-50">
-          <img
-            alt=""
-            src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            class="size-10 rounded-full object-cover"
-          />
+        <div class="sticky inset-x-0 bottom-0">
+          <a href="#" class="flex items-center gap-2 hover:bg-gray-50">
+            <img alt="" src={logo} class="size-10 rounded-full object-cover" />
 
-          <div>
-            <p class="text-xs">
-              <strong class="block font-medium">Admin</strong>
-
-              <span> admin@admin.com </span>
-            </p>
-          </div>
-        </a>
-      </div>
+            <div>
+              <strong class="font-regular text-[#fff]">Admin</strong>
+              <span className="font-regular text-[#fff]">
+                {' '}
+                admin@admin.com{' '}
+              </span>
+            </div>
+          </a>
+        </div>
 
         <ul class="mt-[100px] space-y-1">
           <li>
             <a
               href="#"
-              class="block rounded-lg  text-[16px] font-medium text-gray-700 "
-            >
+              class="block rounded-lg  text-[16px] font-medium text-[#9197B3] ">
               UTI
             </a>
           </li>
 
-          
-          <li className='mt-3'>
+          <li>
             <a
-              href="enfermaria"
-              class={`${isEnfermariaAtiva ? 'text-[#eee]' : 'text-gray-700'} mt-4 block rounded-lgtext-[16px] font-medium hover:text-gray-700`}
-            >
+              href="/"
+              class={`${
+                isEnfermariaAtiva ? 'text-[#eee]' : 'text-[#9197B3]'
+              } mt-4 block rounded-lgtext-[16px] font-medium hover:text-gray-700`}>
               Enfermaria
             </a>
           </li>
@@ -48,19 +48,21 @@ function Menu() {
           <li>
             <a
               href="informacoes"
-              class={`${isInformacoesAtiva ? 'text-[#eee]' : 'text-gray-700'} mt-4 block rounded-lgtext-[16px] font-medium hover:text-gray-700`}
-            >
+              class={`${
+                isInformacoesAtiva ? 'text-[#eee]' : 'text-[#9197B3]'
+              } mt-4 block rounded-lgtext-[16px] font-medium hover:text-gray-700`}>
               Tabela - MEWS
             </a>
           </li>
         </ul>
       </div>
 
-     
+      <div className="flex">
+        <img src={uem} className="w-[80px] mr-3 rounded-[10px]" />
+        <img src={profurg} className="w-[80px] rounded-[10px]" />
+      </div>
     </div>
-
-  )
+  );
 }
 
-
-export default Menu
+export default Menu;
