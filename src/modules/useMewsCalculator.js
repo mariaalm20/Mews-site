@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { calcularPontos } from '../utils/getPoints';
 import { recommendations } from '../utils/getRecommendation';
 import { getStatusColor } from '../utils/getStatusColor';
-
+/* eslint-disable */
 export const useMewsCalculator = () => {
   const [points, setPoints] = useState(0);
   const [recommendation, setRecommendation] = useState(0);

@@ -5,7 +5,7 @@ import pressaoSVG from '../utils/assets/icons/MewsCalculator/pressaoSVG.svg';
 import temperaturaSVG from '../utils/assets/icons/MewsCalculator/temperaturaSVG.svg';
 import conscienciaSVG from '../utils/assets/icons/MewsCalculator/conscienciaSVG.svg';
 import React from 'react';
-
+/* eslint-disable */
 export const CardCriticalStatus = ({ navigate }) => (
   <div className="flex bg-[#F9FAFC] max-w-[36%] flex-col rounded-[16px] font-poppins">
     <h1 className="text-[#292D32] font-medium text-[24px] self-center pt-4">

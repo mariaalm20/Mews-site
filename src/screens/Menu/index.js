@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import logo from '../../utils/assets/icons/Menu/logoUem.jpg';
@@ -29,7 +30,7 @@ function Menu() {
         <ul class="mt-[100px] space-y-1">
           <li>
             <a
-              href="#"
+              href="uti"
               class="block rounded-lg  text-[16px] font-medium text-[#9197B3] ">
               UTI
             </a>

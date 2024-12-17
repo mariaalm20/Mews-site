@@ -1,7 +1,7 @@
 import alertSVG from '../utils/assets/icons/MewsCalculator/alertSVG.svg';
 import profileSVG from '../utils/assets/icons/MewsCalculator/profile-2user.svg';
 import React from 'react';
-
+/* eslint-disable */
 export const CardRecommendation = ({
   color,
   recommendation,

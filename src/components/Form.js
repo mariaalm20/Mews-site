@@ -1,5 +1,5 @@
 import React from 'react';
-
+/* eslint-disable */
 function empty(dados) {
   return (
     Object.values(dados).some((valor) => valor === '') ||

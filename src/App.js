@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MewsCalculator from './screens/MewsCalculator';
 import Menu from './screens/Menu';
 import MewsTable from './screens/MewsTable';
+import UTITable from './screens/UTI';
+
 import React from 'react';
 
 function App() {
@@ -12,6 +14,7 @@ function App() {
         <Routes>
           <Route index path="informacoes" element={<MewsTable />} />
           <Route path="/" element={<MewsCalculator />} />
+          <Route path="/uti" element={<UTITable />} />
         </Routes>
       </BrowserRouter>
     </div>
